@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Custom CSS from Original HTML --- */
+body {
+    /* Ensures consistent box model sizing across browsers */
+    box-sizing: border-box; 
+}
+
+.gradient-bg {
+    /* Main gradient used for the Welcome/Stat banners */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-hover {
+    /* Base transition for cards */
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    /* Lift and shadow effect on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.notification-pulse {
+    /* Pulse animation for notifications badge */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.toggle-switch {
+    /* Transition for mode and category buttons */
+    transition: all 0.3s ease;
+}
+
+.filter-active {
+    /* Gradient background for active filters (Tasks/Categories) */
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+/* --- Styles to support Verification Flow Display --- */
+
+.verification-step {
+    /* Hides non-active steps in multi-step forms */
+    display: none;
+}
+
+.verification-step.active {
+    /* Shows the current active step */
+    display: block;
+}
+
+.upload-area {
+    /* Base style for drag-and-drop zones */
+    border: 2px dashed #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover, .upload-area.dragover {
+    /* Hover/Dragover effect for upload areas */
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+.progress-bar {
+    /* Smooth width change for progress bar */
+    transition: width 0.3s ease;
+}
